@@ -1,0 +1,358 @@
+---
+title: "Qontext fallback appendix"
+description: "Section 2 appendix for interview Q&A."
+---
+
+# Qontext fallback appendix
+
+<Info>
+Section 2: Appendix for Q&A only. Use these sections when challenged during discussion.
+</Info>
+
+## A. Partnership categories: full detail
+
+**Trigger:** "Why those five categories? What about X?"
+
+### Vertical AI (full rationale)
+
+- Core thesis: context quality is immediately measurable in their product.
+- Wrong answer on a voice call is audible. A hallucinated insurance quote has a real-world consequence.
+- This creates urgency that does not exist in productivity tools where bad context often means a slightly worse summary.
+- Pain is acute, measurable, and tied to revenue outcomes the partner already cares about: conversion rate, CSAT, escalation rate.
+- That is why the pitch lands without first explaining why context matters.
+
+### Workflow and automation platforms
+
+- n8n, Make, Zapier.
+- User base is technical builders constructing AI workflows for teams or clients.
+- They are already looking for context sources to plug into pipelines.
+- Qontext fits naturally as a node: "retrieve relevant company context" is a step builders would add if they knew it existed.
+- Go-to-market here is developer-facing, not a founder lunch.
+- Tactics: show up in their community, build a native integration, publish a template workflow.
+- Slower burn than Vertical AI but high leverage at scale.
+
+### Implementation consultancies
+
+- Merantix Momentum: AI solutions from use case to production, enterprise clients across industries.
+- Merantix Labs: external ML department model, takes AI from idea to implementation.
+- PLAN D: data-driven transformation, develops and implements AI applications.
+- Xmethod: AI integration services, GPT, custom agents, intelligent workflows.
+- Repeated problem: each new client project requires building custom knowledge infrastructure from scratch.
+- Qontext removes that by replacing 2-3 weeks of custom retrieval-layer work with vault setup and data connections.
+- Pitch: "we will make delivery faster and more scalable, and you can offer a better solution to clients."
+- Distribution angle: each consultancy has 5-15 enterprise clients in flight, which gives immediate access to accounts Qontext could not approach cold.
+
+### MCP ecosystem
+
+- MCP (Model Context Protocol) is an open-source standard originally from Anthropic, now under Linux Foundation / AAIF.
+- It standardizes how AI applications connect to external data sources and tools.
+- Already adopted by OpenAI, Google, Microsoft, and a growing developer ecosystem.
+- MCP server directory is where developers go to find context sources for AI applications.
+- Qontext play: build and publish a Qontext MCP server.
+- Any MCP-compatible AI app (Claude, ChatGPT, IDE assistants, custom agents) can then query Qontext vaults natively.
+- This is community-driven, not outbound. Show up in the directory and developers find you.
+- No partnership negotiation or legal agreement required.
+- Positioning: Qontext becomes the context MCP server, the standard way AI apps retrieve structured, relationship-aware company context through MCP.
+
+### Data source connectors (deprioritization reasoning)
+
+- HubSpot, Notion, Google Drive, Slack.
+- Massive partner programs with hundreds of applicants.
+- Featured placement needs volume (customer counts, usage numbers, case studies) that Qontext does not have yet.
+- Effort-to-return is poor at this stage.
+- Revisit when there are 20+ mutual customers and a published integration guide.
+- Until then: maintain technical integrations, do not invest relationship time.
+
+## B. telli: full pitch conversation flow
+
+**Trigger:** "Walk me through exactly how that conversation would go."
+
+<Steps>
+  <Step title="Step 1: Open with curiosity (5-10 minutes)">
+    - Do not open with Qontext. Open with questions.
+    - "How do your customers actually work with the knowledge base today. Who is maintaining those files?"
+    - "Have you had enterprise prospects where knowledge complexity felt like a blocker?"
+    - "Is knowledge management on your roadmap, or are you leaving it to the customer for now?"
+    - Goal: understand their internal framing.
+    - Do they see this as a product problem or a customer problem?
+    - Have they had deals where this surfaced?
+    - This shapes the framing that follows and signals respect.
+  </Step>
+  <Step title="Step 2: Frame the opportunity (5 minutes)">
+    - Reflect their framing back and extend it.
+    - "What you are describing is exactly what we see across this vertical."
+    - "The most sophisticated customers in insurance, financial services, and solar have context across 5-10 systems."
+    - "Manual curation works when things are simple, but it compounds as you move upmarket."
+    - "Every upstream change becomes manual, and every stale file is a potential bad call."
+    - Key point: do not pitch product first. Name a pattern they already live with.
+  </Step>
+  <Step title="Step 3: Propose the integration (5 minutes)">
+    - "The integration is a single API call."
+    - "Your agent makes a POST to Qontext retrieval instead of or alongside native KB."
+    - "You get ranked context with source attribution."
+    - "From telli's side, this is a one-day engineering task."
+    - "Customer connects data sources once, then agent always has live context."
+    - Technical details to have ready: REST API, simple auth, sub-500ms latency target for voice.
+    - Fallback behavior: if Qontext is unreachable, agent falls back to native KB.
+    - Native connectors: HubSpot, Google Drive, Notion, Slack.
+    - Seb's questions will focus on latency, reliability, and failure behavior. If something is not built, say so and say when.
+  </Step>
+  <Step title="Step 4: Offer the joint success story (2-3 minutes)">
+    - "None of your current case studies lead with context or knowledge infrastructure."
+    - "That is an opportunity. If pilot results are strong, we co-author the first one that does."
+    - "You get a marketing asset showing telli in a truly complex enterprise environment."
+    - "We get a case study. The customer gets a better product."
+    - Propose enerix if it comes up naturally: 130-location solar franchise, regional pricing variation, installer docs, real complexity.
+    - Close: "What makes sense as a next step. Should our technical teams get on a call?"
+  </Step>
+</Steps>
+
+## C. Full integration checklist (Linear template)
+
+**Trigger:** "How would you actually manage the technical integration process?"
+
+Linear project, duplicated per partner.
+
+### Pre-integration (Day 1)
+
+- Partner has received Qontext API docs.
+- API key issued to partner technical contact.
+- Test vault created with sample data sources connected.
+
+### Integration (Days 2-3)
+
+- Partner system makes a successful retrieval call.
+- Response format validated. Partner can parse context and source attribution.
+- Error handling defined. Fallback to native KB if Qontext is unreachable.
+
+### Validation (Days 3-5)
+
+- Latency tested under realistic conditions (sub-500ms for voice).
+- Retrieval quality validated with 10-20 test queries.
+- Partner technical contact signs off.
+
+### Handoff to pilot
+
+- Pilot customer identified and introduced.
+- Customer data sources connected to a dedicated vault.
+- Baseline metrics captured before Qontext.
+- Success criteria agreed in writing.
+
+## D. HubSpot pipeline: full properties
+
+**Trigger:** "How would you actually track this in HubSpot?" or "What does your CRM setup look like?"
+
+### Pipeline stages with exit criteria
+
+- Identified: scorecard completed, score 3.5 or above.
+- Outreach: response received.
+- Conversation: mutual interest confirmed, next step agreed.
+- Technical Validation: integration working, latency and reliability signed off.
+- Pilot: live with a customer, metrics being collected.
+- Active Partner: case study live, partner selling independently.
+- Scaling: 3+ customers onboarded through this partner.
+
+### Custom properties on each partner record
+
+- Partner category (Voice AI / Automation / Consultancy / MCP / Data Source)
+- Technical contact name and email
+- Commercial contact name and email
+- Integration status (not started / in progress / live / blocked)
+- Blocker description (free text, updated when status is blocked)
+- Pilot customer (linked deal record)
+- Joint content status (none / in progress / published)
+- Content URL (once published)
+- Last touchpoint date (auto-updated on email or meeting log)
+- Partner health (green / yellow / red, manual, updated biweekly)
+- Health note (free text)
+- Scorecard score (numeric, populated at Identified)
+- Source channel (investor intro / event / inbound / cold / user base)
+
+### Automated workflows
+
+- If last touchpoint is over 14 days and stage is Active Partner or Pilot: assign HubSpot task to check in.
+- On partner record creation: enrich with Clearbit or Clay (company size, funding, tech stack).
+- On stage change to Pilot: duplicate Linear integration checklist template.
+- On stage change to Active Partner: trigger joint content workflow and assign content task.
+
+## E. Content and templates
+
+**Trigger:** "What would you actually give a partner after a first meeting?" or "How do you support partners post-integration?"
+
+### Partner one-pager
+
+- Purpose: for implementation consultancies that need internal and client-shareable material before deciding.
+- Contents: what Qontext is (2-3 sentences, no jargon), integration model, partner and client requirements, pilot timeline (6-8 weeks from kick-off to case study), contact details.
+- Not needed for product partners like telli. In that context, conversation replaces the one-pager.
+
+### Integration guide (per partner)
+
+- "How to connect [Partner Name] to Qontext"
+- Include code samples, auth setup, retrieval call structure, response parsing, and error handling.
+- Publish in Qontext public docs once formalized.
+- Also functions as an SEO asset.
+- Seb's team would use this during Phase 1.
+
+### Joint success stories
+
+- Not templated for every partner. Publish when results are compelling.
+- Structure:
+  1. Customer challenge
+  2. Previous approach and limits
+  3. Joint solution
+  4. Measured results
+  5. Customer quote
+- Co-published by both brands.
+- telli leads narrative on enerix story, Qontext provides context infrastructure angle.
+
+## F. Deal tracking and customer handoff
+
+**Trigger:** "What happens after a partner sources a customer? How do you manage that relationship?"
+
+Every partner-sourced customer gets a HubSpot deal record with:
+
+- Source partner tagged (linked company record)
+- Partner involvement level (referral / co-selling / partner-led)
+- Integration status linked to Linear project
+- Revenue attribution for partner performance tracking
+- Data sources connected (which systems are live in their vault)
+- Key contacts (business owner, technical owner)
+- Custom setup notes for non-standard vault configuration
+
+### Customer relationship model (current stage)
+
+- Partner team owns full customer relationship. No dedicated CS yet.
+- No standing calls with pilot customers. Reactive only.
+- Trigger for proactive outreach: usage drop, churn signal, or partner flags an issue.
+- Partner syncs are recurring touchpoints for integration issues and customer feedback.
+- Do not bypass partner to talk directly to customer unless there is retention risk.
+
+### Handoff to CS (when hired)
+
+- Nothing should live in someone's head.
+- Every customer record must be fully documented: company, data sources, vault, partner, contacts, custom configuration.
+- CS inherits complete context on day one.
+
+## G. Sourcing channels: full list with ranking
+
+**Trigger:** "How would you find the next 10 partners?" or "Where does pipeline come from?"
+
+Ranked by realistic yield at current Qontext stage:
+
+1. Existing user base.
+   Any AI tool company already testing the Qontext API is the warmest lead. Monitor usage data and reach out personally when one appears. Small today (around 10 demo customers) but highest conversion.
+2. Investor portfolio mapping.
+   HV Capital portfolio, plus angels from n8n, Make, Cognigy, Neo4j, Celonis ecosystems. Useful for target mapping. Do not rely on intros. Better to land independently and update investors afterward.
+3. Events and conferences.
+   Berlin AI meetups, SaaStr, Web Summit, vertical events in insurance tech and healthcare AI. Pre-research sponsors, speakers, and side events. A short in-person conversation can outperform many cold emails.
+4. Landscape monitoring.
+   Crunchbase and Dealroom alerts for new rounds in voice AI, conversational AI, and AI agents. New funding often means new partnership openness. Weekly digest reviewed manually.
+5. Inbound (grows over time).
+   Lightweight partner interest form on website: company, what they do, what they want. Auto-create HubSpot records. Typeform is enough at this stage.
+
+## H. Full outreach system: tiers, cadence, templates
+
+**Trigger:** "Walk me through your outreach in detail." or "How do you handle follow-ups?"
+
+### Tier 1: warm intro available
+
+- Ask mutual contact for a double opt-in intro.
+- Keep ask simple: exploratory product-fit call or lunch.
+- No pitch in intro message.
+- Follow-up is manual only.
+
+### Tier 2: no intro, strong signal (scorecard 3.5+)
+
+- Direct message to founder or CTO via LinkedIn or email.
+- Lead with specific observation from public docs or customer stories.
+- Structure: observation, relevance, ask.
+- One CTA. No deck. No long pitch.
+
+### Tier 3: cold, speculative (scorecard 4+)
+
+- Three sentences max: what Qontext does, why relevant now, ask for 20 minutes.
+- No attachments and no long value prop.
+- Stop after three touches without response.
+
+### Follow-up cadence (Tier 2 and Tier 3)
+
+- Day 0: initial outreach.
+- Day 4: follow-up with one new piece of value.
+- Day 10: final low-pressure touch.
+- If no response: park for three months and re-evaluate.
+
+### Automation
+
+- HubSpot sequences for Tier 2 and 3 timing and structure.
+- Content is still personalized before sending.
+- Maintain a template library with 3-4 variants per tier to avoid fatigue.
+
+## I. Full automation breakdown
+
+**Trigger:** "What would you automate versus keep manual?" or "How do you keep this lean?"
+
+### Automate (no quality loss)
+
+- Follow-up sequences for Tier 2 and 3 outreach (HubSpot)
+- Partner record enrichment (HubSpot + Clay or Clearbit)
+- Meeting scheduling (Calendly)
+- Stale partner alerts (14+ days without touchpoint)
+- Integration checklist creation on stage change to Technical Validation
+- Pipeline dashboard for stage, velocity, health status
+- Landscape monitoring alerts in Crunchbase or Dealroom
+- Inbound partner form to HubSpot record creation and enrichment
+
+### AI-assisted (human review required)
+
+- Partner research and gap analysis (Claude, around 30 minutes per partner)
+- Outreach drafts based on templates and research
+- Success story drafts from pilot data
+- Meeting prep briefs from CRM history and recent activity
+- Pilot metric analysis and narrative drafting
+
+### Never automate
+
+- Warm intro outreach
+- Pitch conversation
+- Partner health assessment
+- Decision to formalize or end partnership
+- Pilot customer selection
+
+## J. Scaling trigger: full detail
+
+**Trigger:** "When do you hire? What does team structure look like at scale?"
+
+### System capacity
+
+- Handles 10+ active partnerships without structural changes.
+- One person can run sourcing, outreach, integration management, pilot oversight, and content.
+- Pipeline and automation absorb volume. Templates absorb repeatable communication.
+
+### Bottleneck at scale: vault setup and maintenance
+
+Every partner-sourced customer needs:
+
+- Dedicated vault creation
+- Data source identification and connection
+- Retrieval quality validation (test queries and accuracy)
+- Ongoing monitoring when data sources change
+
+### Scale thresholds
+
+- 1-2 simultaneous pilots: manageable alongside everything else.
+- 5 simultaneous active pilots: technical workload becomes full-time.
+- Hiring trigger: around 5 simultaneous active pilots.
+
+### Role: technical partnerships / solutions engineer
+
+- Owns vault setup for partner-sourced customers
+- Manages data source connections and configuration
+- Validates retrieval quality before pilot launch
+- First technical point of contact for partner teams post-integration
+- Works from Linear checklist and escalates to engineering only for product gaps
+
+### Why this hire, not a second partnership manager
+
+- Senior person stays focused on relationships and pipeline.
+- Solutions engineer handles technical execution.
+- Capacity expands without duplicating the relationship layer.

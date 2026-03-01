@@ -1,0 +1,146 @@
+---
+title: "Qontext - Founders Associate interview presentation"
+---
+
+## Start
+
+- Voice AI companies have a structural knowledge gap, and it gets worse as they move upmarket.
+- Engineering focus is voice quality, conversation flow, and automation, not knowledge infrastructure.
+- Result: agents are only as smart as five manually uploaded files (at telli for example).
+- A PDF of the product catalog. A policy doc someone exported last quarter.
+- Static. No live sync. No connectors.
+- Qontext fixes this without them building anything. That is where partnerships start.
+
+## Partnership landscape
+
+Five categories worth knowing about:
+
+- Vertical AI tools: voice AI, conversational AI, AI agents.
+  This is where I would start. Context quality is immediately visible in their product. Bad context means bad calls. The pain is measurable.
+- Workflow and automation platforms: n8n, Make, Zapier.
+  Their users build AI workflows that need context. Qontext becomes a node in the pipeline. Strong category, second priority.
+- Implementation consultancies: Merantix, PLAN D, Xmethod.
+  They build AI solutions for enterprises and need a context layer they can plug in across clients. Distribution into accounts Qontext could not reach directly. Worth building relationships with 2-3 early.
+- MCP ecosystem.
+  MCP is the emerging standard for how AI applications connect to data. Publish a Qontext MCP server, show up in the directory, and let developers find you. Community-driven growth, not a partnership to pitch, but a position to occupy.
+- Data source platforms: HubSpot, Notion, Google Drive.
+  Co-marketing, joint docs, marketplace listings. Hard to get attention at this stage. Keep on the radar, but do not spend outreach time here yet.
+
+Where to start: Vertical AI. Where not to start: Data source platforms.
+
+## Why vertical AI first
+
+Three reasons, and they compound:
+
+1. Context quality is audible.
+   Wrong answer on a live call and the customer hears it. No hiding behind a UI. Value of better context is undeniable, not a nice-to-have, but a conversion and retention problem.
+2. The knowledge gap is structural, not incidental.
+   Voice AI startups are building voice quality, auto-dialing, and conversation flow. Knowledge infrastructure is not their core product and not on their near-term roadmap.
+3. They move fast.
+   Pre-seed to Series A companies make integration decisions quickly. One lunch can turn into a technical call immediately after.
+
+Once the first one works, the playbook transfers directly.
+
+## Telli deep dive
+
+### The gap
+
+- telli operates in energy, insurance, real estate, healthcare, and financial services.
+- These are complex verticals with deep, dynamic knowledge spread across multiple systems.
+- Native knowledge base: five static files (PDF, DOCX, TXT, or Markdown), roughly 1,500 pages max.
+- No live sync. No connectors.
+- Every pricing change, policy update, or product spec shift means someone manually re-exports and re-uploads.
+- I reviewed all 10 published success stories. None mention knowledge or context as a feature.
+- Either they have not solved it, or they have not realized it is a selling point yet. Either way, the window is open.
+- This works for simple use cases such as appointment booking and basic FAQ.
+- It breaks for the verticals telli is expanding into: solar configurations, insurance policy trees, medical catalogs, and financial services compliance docs.
+
+### Who to contact and why
+
+Two people, in the same conversation:
+
+- Finn, CEO.
+  Understands the enterprise unlock argument. Pitch: this is what lets telli sell into the complex accounts they are already chasing.
+- Seb, CTO.
+  Validates whether the integration is real and whether latency holds up on live calls. He needs to be in the room so technical credibility is established from the first meeting.
+
+Format: lunch with both, casual and exploratory, founder-level.
+
+### The pitch
+
+<Steps>
+  <Step title="Ask and listen first">
+    - Ask how customers actually manage the five-file limit.
+    - Ask whether enterprise prospects have flagged context as a limitation.
+    - Ask what their roadmap looks like around knowledge management. - Although this can be a tricky one
+  </Step>
+  <Step title="Frame the opportunity">
+    - Context is spread across CRMs, wikis, SharePoint, and internal databases.
+    - Today it is manually distilled into five files, then re-uploaded whenever something changes.
+    - As telli moves upmarket, the gap between what the agent knows and what it needs to know keeps growing.
+  </Step>
+  <Step title="Propose integration">
+    - Single API call: telli's agent queries Qontext instead of, or alongside, the native knowledge base.
+    - REST API, simple auth, one retrieval endpoint.
+    - Native connectors already exist for the data sources telli customers use.
+    - Customer connects once, agent pulls live context, no manual curation.
+  </Step>
+  <Step title="Offer a joint success story">
+    - None of telli's current success stories lead with context.
+    - Run a pilot, measure results, and co-author the first one that does.
+  </Step>
+</Steps>
+
+### The phased plan
+
+<Steps>
+  <Step title="Phase 1: Technical integration">
+    - telli agent makes a request to the Qontext retrieval API and gets ranked context with sources.
+    - Main validation is latency, because voice cannot tolerate delays.
+    - telli signs off on reliability and fallback behavior.
+  </Step>
+  <Step title="Phase 2: Joint pilot">
+    - enerix is the obvious candidate: a 130-location solar franchise with product specs and pricing varying by region and installer, spread across multiple systems.
+    - Run the same telli agent on two context paths: native five-file KB vs. Qontext vault.
+    - Measure answer accuracy, call resolution rate, escalation rate, and CSAT.
+  </Step>
+  <Step title="Phase 3: Success story and formalization">
+    - Co-authored case study: telli leads narrative, Qontext provides the context angle.
+    - First telli story that leads with knowledge.
+    - Formalize Qontext as the recommended context layer for enterprise-tier customers.
+  </Step>
+</Steps>
+
+## How I would run this daily
+
+Four components:
+
+1. Pipeline in HubSpot.
+   Seven stages: Identified, Outreach, Conversation, Technical Validation, Pilot, Active Partner, Scaling.
+   Each partner record tracks integration status, pilot customer, joint content status, and partner health.
+   Partner health is green/yellow/red, updated manually on a regular cadence.
+   The pipeline shows where every partner is and what is blocking them.
+2. Scorecard before any outreach.
+   Five criteria: context gap severity, customer overlap, integration ease, partner speed, strategic signal value.
+   Minimum 3.5 out of 5 to pursue. Below that, park and revisit quarterly.
+   The telli exercise, researching a partner's knowledge limitations from public docs, becomes a repeatable process.
+3. Outreach in three tiers.
+   Warm intro: double opt-in, no pitch in the intro message.
+   Direct with signal: lead with a specific observation about their product, not a generic value prop.
+   Cold speculative: only if scorecard is 4 or above, three sentences maximum.
+   Follow-up cadence: three touches, then park if there is no response.
+4. Clear automation boundary.
+   Automate follow-ups, record enrichment, scheduling, stale partner alerts, and pipeline dashboards.
+   AI-assist partner research, outreach drafts, and meeting prep briefs, with human review before anything goes out.
+   Never automate warm intros, pitch conversations, partner health assessment, or formalization decisions.
+
+That is where judgment lives, and judgment cannot be templated.
+
+## Close and scale
+
+- Once telli works, the playbook transfers.
+- Same gap analysis, same integration approach, same pilot structure across Parloa, Cognigy, and Decagon.
+- The first partnership is not just a partnership. It is proof the playbook works, and proof makes the next five faster.
+- The system handles 10+ partners without structural change.
+- Bottleneck at scale is vault setup and maintenance per partner-sourced customer.
+- Solutions engineer to own vault setup, data connections, and retrieval quality?
